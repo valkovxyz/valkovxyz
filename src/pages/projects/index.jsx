@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { Container } from '@/components/container/container';
 
 
-function Projects({ data }) {
+export const Projects = ({ data }) => {
   console.log(data)
   return (
     <div>
