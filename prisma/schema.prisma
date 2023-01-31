@@ -1,0 +1,20 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["referentialIntegrity"]
+}
+
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model Project {
+  id           Int    @id @unique @default(autoincrement())
+  name         String @unique
+  demoUrl      String
+  githubUrl    String
+  description  String @db.VarChar(500)
+  screenshots  String @db.VarChar(500)
+  technologies String @db.VarChar(500)
+}
