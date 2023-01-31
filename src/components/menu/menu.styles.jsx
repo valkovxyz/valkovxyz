@@ -8,7 +8,6 @@ export const MenuContainer = styled.div`
   flex-direction: column;
 `
 export const MenuLink = styled(Link)`
-  
   display: flex;
   align-items: center;
   justify-content: center;
