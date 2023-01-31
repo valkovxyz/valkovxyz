@@ -1,16 +1,15 @@
-import { MenuLinkStyled } from '@/components/menu_link/menu_link.styles';
-import { MenuLink } from '@/components/menu_link/menu_link';
+import {MenuContainer, MenuStyled, MenuLink} from "@/components/menu/menu.styles";
 
 export const Menu = () => {
-  return (
-    <>
-      <MenuLinkStyled>
-        <MenuLink>1</MenuLink>
-        <MenuLink>2</MenuLink>
-        <MenuLink>3</MenuLink>
-        <MenuLink>4</MenuLink>
-        <MenuLink>5</MenuLink>
-      </MenuLinkStyled>
-    </>
-  )
+    return (
+        <>
+            <MenuContainer>
+                    <MenuLink href={'/'}>1</MenuLink>
+                    <MenuLink href={'/projects'}>1</MenuLink>
+                    <MenuLink href={'/'}>1</MenuLink>
+                    <MenuLink href={'/'}>1</MenuLink>
+                    <MenuLink href={'/'}>1</MenuLink>
+            </MenuContainer>
+        </>
+    )
 }

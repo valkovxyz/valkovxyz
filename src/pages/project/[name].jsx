@@ -1,12 +1,15 @@
-import { useRouter } from 'next/router';
+import {useRouter} from 'next/router';
+import {Container} from "@/components/container/container";
 
 const Project = () => {
-  const router = useRouter()
-  const {name} = router.query
+    const router = useRouter()
+    const {name} = router.query
 
-  return (
-    <div>Project : {name}</div>
-  )
+    return (
+        <Container>
+            <div>Project : {name}</div>
+        </Container>
+    )
 }
 
 export default Project

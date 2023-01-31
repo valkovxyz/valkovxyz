@@ -1,6 +1,6 @@
 import { ContainerStyled } from '@/components/container/container.styles';
-import { MenuLink } from '@/components/menu_link/menu_link';
 import Head from 'next/head';
+import {Menu} from "@/components/menu/menu";
 
 export const Container = ({ children }) => {
   return (
@@ -12,6 +12,7 @@ export const Container = ({ children }) => {
         <link rel="icon" href="/favicon.ico"/>
       </Head>
       <ContainerStyled>
+          <Menu/>
         {children}
       </ContainerStyled>
     </>
