@@ -8,6 +8,6 @@ export const ContainerStyled = styled.main`
   background-color: #282828;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 `

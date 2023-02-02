@@ -4,7 +4,7 @@ import { HomeSectionStyled } from '@/components/homesection/homesection.styles';
 export const HomeSection = () => {
   return (
     <HomeSectionStyled>
-      <AboutMe/>
+        <AboutMe/>
     </HomeSectionStyled>
   )
 }

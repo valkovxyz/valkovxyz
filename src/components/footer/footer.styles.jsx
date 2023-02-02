@@ -5,4 +5,5 @@ export const FooterStyled = styled.footer`
   justify-content: center;
   align-items: center;
   width: 100vw;
+  padding: 20px;
 `

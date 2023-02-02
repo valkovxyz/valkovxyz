@@ -11,6 +11,8 @@ const Home = () => {
         <>
             <Container>
                 <HomeSection/>
+                <HomeSection/>
+                <HomeSection/>
             </Container>
         </>
     )
