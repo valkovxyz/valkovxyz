@@ -2,11 +2,20 @@ import {ContainerStyled} from '@/components/container/container.styles';
 import Head from 'next/head';
 import {Menu} from '@/components/menu/menu';
 import {Wrapper} from '@/components/wrapper/wrapper';
-import HeaderMemo from '@/components/header/header';
 import {Footer} from '@/components/footer/footer';
 import {Content} from "@/components/content/content";
+import Header from "@/components/header/header";
+import {useState, useEffect} from "react";
+import Loadingscreen from "@/components/loadingscreen/loadingscreen";
+import LoadingScreen from "@/components/loadingscreen/loadingscreen";
 
 export const Container = ({children}) => {
+    const [loading, setLoading] = useState(false)
+
+    useEffect(() => {
+        setLoading(true);
+    }, [])
+
     return (
         <>
             <Head>
@@ -15,16 +24,23 @@ export const Container = ({children}) => {
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
-            <ContainerStyled>
-                <HeaderMemo/>
-                <Wrapper>
-                    <Menu/>
-                    <Content>
-                        {children}
-                    </Content>
-                </Wrapper>
-                <Footer/>
-            </ContainerStyled>
+            <>
+                {loading ? (
+                    <ContainerStyled>
+                        <Header/>
+                        <Wrapper>
+                            <Menu/>
+                            <Content>
+                                {children}
+                            </Content>
+                        </Wrapper>
+                        <Footer/>
+                    </ContainerStyled>
+                ) : (
+                    <LoadingScreen/>
+                )}
+
+            </>
         </>
     )
 }

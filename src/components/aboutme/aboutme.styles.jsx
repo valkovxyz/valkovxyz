@@ -16,7 +16,7 @@ export const AboutMeContainer = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  animation: 1s ease-out 2s 1 backwards ShowUp;
+  animation: 1s ease-out 1s 1 backwards ShowUp;
 `
 
 export const AboutMeText = styled.p`
