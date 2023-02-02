@@ -1,13 +1,10 @@
 import styled from 'styled-components';
 
-export const ContainerStyled = styled.main`
-  height: 100vh;
-  width: 100vw;
-  margin: 0;
-  padding: 0;
-  background-color: #282828;
+export const HomeSectionStyled = styled.div`
   display: flex;
   flex-direction: column;
+  width: 95vw;
   align-items: center;
   justify-content: center;
+  
 `

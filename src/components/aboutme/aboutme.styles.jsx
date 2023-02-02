@@ -3,9 +3,7 @@ import styled from "styled-components";
 export const AboutMeContainer = styled.section`
   border: 1px solid #2DE956;
   border-radius: 10px;
-  margin: 50px;
-  padding: 50px;
-  width: 90vw;
+  width: 70vw;
   display: flex;
   justify-content: space-around;
   align-items: center;

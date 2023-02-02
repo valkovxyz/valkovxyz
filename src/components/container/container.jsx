@@ -1,6 +1,9 @@
 import { ContainerStyled } from '@/components/container/container.styles';
 import Head from 'next/head';
-import {Menu} from "@/components/menu/menu";
+import { Menu } from '@/components/menu/menu';
+import { Wrapper } from '@/components/wrapper/wrapper';
+import { Header } from '@/components/header/header';
+import { Footer } from '@/components/footer/footer';
 
 export const Container = ({ children }) => {
   return (
@@ -12,8 +15,12 @@ export const Container = ({ children }) => {
         <link rel="icon" href="/favicon.ico"/>
       </Head>
       <ContainerStyled>
+        <Header/>
+        <Wrapper>
           <Menu/>
-        {children}
+          {children}
+        </Wrapper>
+        <Footer/>
       </ContainerStyled>
     </>
   )

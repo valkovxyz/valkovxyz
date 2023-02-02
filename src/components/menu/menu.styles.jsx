@@ -11,12 +11,17 @@ export const MenuLink = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #2DE956;
+  background-color: #615e5e;
   width: 60px;
   height: 60px;
   margin: 15px 30px;
   border-radius: 10%;
+  transition: 0.5s;
   &:first-child {
     margin-top: 50px
+  }
+  &:hover {
+    background-color: #5199e4;
+    transition: 0.5s;
   }
 `
