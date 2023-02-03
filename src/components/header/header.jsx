@@ -1,7 +1,7 @@
 import { HeaderStyled } from '@/components/header/header.styles';
 import React from "react";
 
- const Header = () => {
+export const Header = () => {
   return (
     <>
       <HeaderStyled>
@@ -11,5 +11,3 @@ import React from "react";
   )
 }
 
-const HeaderMemo = React.memo(Header)
-export default HeaderMemo

@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
-import {Container} from '@/components/container/container';
+import {Layout} from '@/components/container/layout';
 import {Menu} from '@/components/menu/menu';
 import {AboutMe} from "@/components/aboutme/aboutme";
 import { HomeSection } from '@/components/homesection/homesection';
@@ -9,11 +9,11 @@ import { HomeSection } from '@/components/homesection/homesection';
 const Home = () => {
     return (
         <>
-            <Container>
+            <Layout>
                 <HomeSection/>
                 <HomeSection/>
                 <HomeSection/>
-            </Container>
+            </Layout>
         </>
     )
 }

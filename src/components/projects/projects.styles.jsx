@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-export const HomeSectionStyled = styled.div`
+export const ProjectsContainerStyled = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 93vw;
   align-items: center;
   justify-content: center;

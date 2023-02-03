@@ -1,14 +1,14 @@
 import {useRouter} from 'next/router';
-import {Container} from "@/components/container/container";
+import {Layout} from "@/components/container/layout";
 
 const Project = () => {
     const router = useRouter()
     const {name} = router.query
 
     return (
-        <Container>
+        <Layout>
             <div>Project : {name}</div>
-        </Container>
+        </Layout>
     )
 }
 
