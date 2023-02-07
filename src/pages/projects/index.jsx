@@ -1,6 +1,7 @@
 import Link from 'next/link';
-import { Layout } from '@/components/container/layout';
+import { Layout } from '@/components/layout/layout';
 import { ProjectsContainer } from '@/components/projects/projects';
+import { ProjectBox, ProjectMoreDetailsButton, ProjectTitle } from '@/components/projects/projects.styles';
 
 
 export const Projects = ({ data }) => {
@@ -8,9 +9,14 @@ export const Projects = ({ data }) => {
   return (
       <ProjectsContainer>
         {data.map((project) =>
-          <div key={project.id}>
-            <Link href="project/[name]" as={`/project/${project.name}`}> {project.name}</Link>
-          </div>)}
+          <ProjectBox key={project.id}>
+            <ProjectTitle>{project.name}</ProjectTitle>
+            <Link href="project/[name]" as={`/project/${project.name.replace(/ /g,'')}`}>
+              <ProjectMoreDetailsButton>
+                More details...
+              </ProjectMoreDetailsButton>
+            </Link>
+          </ProjectBox>)}
       </ProjectsContainer>
   )
 }

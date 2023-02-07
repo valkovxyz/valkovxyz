@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const LayoutStyled = styled.main`
   height: 90vh;
-  width: 90vw;
+  width: 70vw;
   margin: 0;
   padding: 0;
   background-color: #282828;

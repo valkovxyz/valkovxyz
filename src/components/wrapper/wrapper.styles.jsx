@@ -5,6 +5,6 @@ export const WrapperStyled = styled.section`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100vw;
-  height: 89vh;
+  width: 70vw;
+  height: 85vh;
 `

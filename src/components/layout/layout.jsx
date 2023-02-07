@@ -1,4 +1,4 @@
-import { ContainerStyled } from '@/components/container/layout.styles';
+import { ContainerStyled } from '@/components/layout/layout.styles';
 import Head from 'next/head';
 import { Menu } from '@/components/menu/menu';
 import { Wrapper } from '@/components/wrapper/wrapper';

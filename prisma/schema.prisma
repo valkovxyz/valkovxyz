@@ -18,4 +18,5 @@ model Project {
   demoUrl String
   githubUrl String
   description String
+  screenshots String[]
 }
