@@ -19,7 +19,7 @@ export const Projects = ({ data }) => {
               <ProjectsTitle>
                 {project.name}
               </ProjectsTitle>
-              <Link href="project/[name]" as={`/project/${project.name}`}>
+              <Link href="project/[id]" as={`/project/${project.id}`}>
                 <ProjectsMoreDetailsButton>
                   More details...
                 </ProjectsMoreDetailsButton>
@@ -34,7 +34,7 @@ export const Projects = ({ data }) => {
   )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await fetch(`http://localhost:3000/api/projects`)
   const data = await res.json()
   return {

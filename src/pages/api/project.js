@@ -18,7 +18,6 @@ async function getProject(req, res) {
           id: Number(projectId)
         }
     })
-    console.log(data)
     return res.json(data)
   } catch (error) {
     res.status(500).json({ error: 'Error finding project ', success: false })
