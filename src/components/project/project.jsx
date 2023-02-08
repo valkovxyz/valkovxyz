@@ -1,14 +1,13 @@
 import {
   ProjectButton,
   ProjectButtonsContainer,
-  ProjectContainer,
-  ProjectInfo,
+  ProjectContainer, ProjectDescription, ProjectDescriptionContainer,
+  ProjectInfo, ProjectNameContainer,
   ProjectTechnologies,
   ProjectTechnologiesContainer,
   ProjectTechnologyChip,
   ProjectTitle
 } from '@/components/project/project.styles';
-import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import 'photoswipe/dist/photoswipe.css'
 import { Gallery, Item } from 'react-photoswipe-gallery'
 
@@ -35,13 +34,16 @@ export const Project = ({ data }) => {
           </ProjectImageContainer>
         </Gallery>
         <ProjectInfo>
-          <ProjectButtonsContainer>
+          <ProjectNameContainer>
             <ProjectTitle>
               {data.name}
             </ProjectTitle>
-            <ProjectButton href={data.demoUrl} target="_blank">  View demo </ProjectButton>
-            <ProjectButton href={data.githubUrl} target="_blank"> Source code </ProjectButton>
-          </ProjectButtonsContainer>
+            <ProjectButtonsContainer>
+              <ProjectButton href={data.demoUrl} target="_blank">  View demo </ProjectButton>
+              <ProjectButton href={data.githubUrl} target="_blank"> Source code </ProjectButton>
+            </ProjectButtonsContainer>
+          </ProjectNameContainer>
+
           <ProjectTechnologiesContainer>
             <ProjectTitle>
               Technologies
@@ -55,6 +57,12 @@ export const Project = ({ data }) => {
 
             </ProjectTechnologies>
           </ProjectTechnologiesContainer>
+          <ProjectDescriptionContainer>
+            <ProjectTitle>Description</ProjectTitle>
+            <ProjectDescription>
+              {data.description}
+            </ProjectDescription>
+          </ProjectDescriptionContainer>
         </ProjectInfo>
       </ProjectContainer>
     </>
