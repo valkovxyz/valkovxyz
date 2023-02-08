@@ -8,7 +8,6 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: #282828;
-    
     @media screen and (max-width: 800px) {
       padding: 10px;
       

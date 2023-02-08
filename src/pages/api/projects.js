@@ -17,7 +17,6 @@ async function getProjects(res) {
     const data = await prisma.project.findMany()
     return res.json(data)
   } catch (error) {
-    console.log('No projects', error)
     res.status(500).json({ error: 'Error fetching projects ', success: false })
   }
 };
@@ -30,7 +29,9 @@ async function createProject(req, res) {
         name: body.name,
         demoUrl: body.demoUrl,
         githubUrl: body.githubUrl,
-        description: body.description
+        description: body.description,
+        technologies: body.technologies,
+        screenshots: body.screenshots
       }
     })
     return res.status(200).json(newEntry)
@@ -39,3 +40,4 @@ async function createProject(req, res) {
     res.status(500).json({ error: 'Error creating project', success: false })
   }
 }
+

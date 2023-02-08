@@ -1,33 +1,44 @@
 import Link from 'next/link';
-import { Layout } from '@/components/layout/layout';
 import { ProjectsContainer } from '@/components/projects/projects';
-import { ProjectBox, ProjectMoreDetailsButton, ProjectTitle } from '@/components/projects/projects.styles';
+import {
+  ProjectsBox,
+  ProjectsImage, ProjectsInfo,
+  ProjectsMoreDetailsButton,
+  ProjectsTitle
+} from '@/components/projects/projects.styles';
 
 
 export const Projects = ({ data }) => {
   console.log(data)
   return (
-      <ProjectsContainer>
-        {data.map((project) =>
-          <ProjectBox key={project.id}>
-            <ProjectTitle>{project.name}</ProjectTitle>
-            <Link href="project/[name]" as={`/project/${project.name.replace(/ /g,'')}`}>
-              <ProjectMoreDetailsButton>
-                More details...
-              </ProjectMoreDetailsButton>
-            </Link>
-          </ProjectBox>)}
-      </ProjectsContainer>
+    <ProjectsContainer>
+      {data.map((project) =>
+        <ProjectsBox key={project.id}>
+          <>
+            <ProjectsInfo>
+              <ProjectsTitle>
+                {project.name}
+              </ProjectsTitle>
+              <Link href="project/[name]" as={`/project/${project.name}`}>
+                <ProjectsMoreDetailsButton>
+                  More details...
+                </ProjectsMoreDetailsButton>
+              </Link>
+            </ProjectsInfo>
+            {project.screenshots.split(',').map(screen => (
+              <ProjectsImage key={project.id} src={screen} alt={'screen'} width={280} height={170}/>
+            ))}
+          </>
+        </ProjectsBox>)}
+    </ProjectsContainer>
   )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await fetch(`http://localhost:3000/api/projects`)
   const data = await res.json()
   return {
-    props: {
-      data
-    }
+    props: {data}
   }
 }
 
