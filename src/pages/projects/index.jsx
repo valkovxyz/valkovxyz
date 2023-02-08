@@ -1,36 +1,11 @@
-import Link from 'next/link';
-import { ProjectsContainer } from '@/components/projects/projects';
-import {
-  ProjectsBox,
-  ProjectsImage, ProjectsInfo,
-  ProjectsMoreDetailsButton,
-  ProjectsTitle
-} from '@/components/projects/projects.styles';
+import { Projects } from '@/components/projects/projects';
 
-
-export const Projects = ({ data }) => {
+export const ProjectsPage = ({ data }) => {
   console.log(data)
   return (
-    <ProjectsContainer>
-      {data.map((project) =>
-        <ProjectsBox key={project.id}>
-          <>
-            <ProjectsInfo>
-              <ProjectsTitle>
-                {project.name}
-              </ProjectsTitle>
-              <Link href="project/[id]" as={`/project/${project.id}`}>
-                <ProjectsMoreDetailsButton>
-                  More details...
-                </ProjectsMoreDetailsButton>
-              </Link>
-            </ProjectsInfo>
-            {project.screenshots.split(',').map(screen => (
-              <ProjectsImage key={project.id} src={screen} alt={'screen'} width={280} height={170}/>
-            ))}
-          </>
-        </ProjectsBox>)}
-    </ProjectsContainer>
+    <>
+      <Projects data={data}/>
+    </>
   )
 }
 
@@ -38,8 +13,8 @@ export async function getServerSideProps() {
   const res = await fetch(`http://localhost:3000/api/projects`)
   const data = await res.json()
   return {
-    props: {data}
+    props: { data }
   }
 }
 
-export default Projects;
+export default ProjectsPage;

@@ -14,7 +14,7 @@ model Project {
   name         String @unique
   demoUrl      String
   githubUrl    String
-  description  String
+  description  String @db.VarChar(500)
   screenshots  String
   technologies String
 }

@@ -1,8 +1,9 @@
 import styled from 'styled-components';
-import Link from 'next/link';
+import { ButtonDefault } from '@/components/button/button.styles';
 import Image from 'next/image'
+import Link from 'next/link';
 
-export const ProjectsContainerStyled = styled.div`
+export const ProjectsContainer = styled.div`
   @keyframes ShowProjects {
     from {
       opacity: 0;

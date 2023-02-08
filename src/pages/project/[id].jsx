@@ -1,22 +1,21 @@
 import {useRouter} from 'next/router';
-import {Layout} from "@/components/layout/layout";
+import { Project } from '@/components/project/project';
 
-const Project = ({project}) => {
+const ProjectPage = ({data}) => {
 
     const router = useRouter()
     const {id} = router.query
-        console.log(project)
+        console.log(data)
 
     return (
-        <Layout>
-            <div>Project : {id}</div>
-            <h1>{project.githubUrl}</h1>
-        </Layout>
+        <>
+            <Project data={data}/>
+        </>
     )
 }
 
 
-export default Project
+export default ProjectPage
 
 /*export async function getStaticPaths() {
     const response = await fetch('http://localhost:3000/api/projects')
@@ -51,11 +50,11 @@ export const getStaticProps = async (context) => {
 export async function getServerSideProps(context) {
     const { id } = context.query
     const response = await fetch(`http://localhost:3000/api/project?id=${id}`)
-    const project = await response.json()
+    const data = await response.json()
 
     return {
         props: {
-            project
+            data
         }
     }
 }

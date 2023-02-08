@@ -9,11 +9,9 @@ import { HomeSection } from '@/components/homesection/homesection';
 const Home = () => {
     return (
         <>
-            <Layout>
                 <HomeSection/>
                 <HomeSection/>
                 <HomeSection/>
-            </Layout>
         </>
     )
 }
