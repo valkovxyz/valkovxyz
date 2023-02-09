@@ -1,15 +1,15 @@
-import { Projects } from '@/components/projects/projects';
+import { ProjectsComponent } from '@/components/projects/projects';
 
-export const ProjectsPage = ({ data }) => {
-
+export const Projects = ({ data }) => {
+  console.log(data)
   return (
     <>
-
+      <ProjectsComponent data={data}/>
     </>
   )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await fetch(`http://localhost:3000/api/projects`)
   const data = await res.json()
   return {
@@ -17,4 +17,4 @@ export async function getServerSideProps() {
   }
 }
 
-export default ProjectsPage;
+export default Projects;
