@@ -9,7 +9,7 @@ export const ProjectsPage = ({ data }) => {
   )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await fetch(`http://localhost:3000/api/projects`)
   const data = await res.json()
   return {
