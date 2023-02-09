@@ -6,7 +6,7 @@ import {
 } from '@/components/projects/projects.styles';
 import Link from 'next/link';
 
-export const ProjectsComponent = ({ data }) => {
+export const ProjectsComponent = ({ data = [] }) => {
   return (
     <>
       <ProjectsContainer>

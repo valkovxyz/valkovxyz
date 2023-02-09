@@ -16,6 +16,7 @@ export async function getServerSideProps() {
     props: { data }
   }
 }
+export default Projects;
 
 
 /*export const getStaticProps = async () => {
@@ -30,5 +31,3 @@ export async function getServerSideProps() {
     }
   }
 }*/
-
-export default Projects;

@@ -1,6 +1,6 @@
 import {useRouter} from 'next/router';
 import { Project } from '@/components/project/project';
-P
+import App from 'next'
 const ProjectPage = ({data}) => {
 
     const router = useRouter()
@@ -17,7 +17,20 @@ const ProjectPage = ({data}) => {
 
 export default ProjectPage
 
-export async function getStaticPaths() {
+export async function getServerSideProps(context) {
+    const { id } = context.query
+    const response = await fetch(`https://valkov.xyz/api/project?id=${id}`)
+    const data = await response.json()
+
+    return {
+        props: {
+            data
+        }
+    }
+}
+
+
+/*export async function getStaticPaths() {
     const response = await fetch('https://valkov.xyz/api/projects')
     const data = await response.json()
 
@@ -30,33 +43,22 @@ export async function getStaticPaths() {
     })
     return {
     paths,
-    fallback: false
+    fallback: true
     }
-}
+}*/
 
-export const getStaticProps = async (context) => {
+/*export async function getStaticProps(context){
     const { params } = context
     const response = await fetch(`https://valkov.xyz/api/project?id=${params.id}`)
-    const project = await response.json()
-
-    return {
-
-        props: {
-            project
-        }
-    }
-}
-
-/*export async function getServerSideProps(context) {
-    const { id } = context.query
-    const response = await fetch(`https://valkov.xyz/api/project?id=${id}`)
     const data = await response.json()
 
     return {
+
         props: {
             data
         }
     }
 }*/
+
 
 
