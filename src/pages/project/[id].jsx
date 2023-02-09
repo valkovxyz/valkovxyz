@@ -17,7 +17,7 @@ const ProjectPage = ({data}) => {
 
 export default ProjectPage
 
-export async function getStaticPaths() {
+/*export async function getStaticPaths() {
     const response = await fetch('https://valkov.xyz/api/projects')
     const data = await response.json()
 
@@ -30,13 +30,13 @@ export async function getStaticPaths() {
     })
     return {
     paths,
-    fallback: true
+    fallback: false
     }
 }
 
 export const getStaticProps = async (context) => {
     const { params } = context
-    const response = await fetch(`http://valkov.xyz/api/project?id=${params.id}`)
+    const response = await fetch(`http://localhost:3000/api/project?id=${params.id}`)
     const project = await response.json()
 
     return {
@@ -45,9 +45,9 @@ export const getStaticProps = async (context) => {
             project
         }
     }
-}
+}*/
 
-/*export async function getServerSideProps(context) {
+export async function getServerSideProps(context) {
     const { id } = context.query
     const response = await fetch(`https://valkov.xyz/api/project?id=${id}`)
     const data = await response.json()
@@ -57,6 +57,6 @@ export const getStaticProps = async (context) => {
             data
         }
     }
-}*/
+}
 
 

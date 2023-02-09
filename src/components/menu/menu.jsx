@@ -5,9 +5,13 @@ import ContactsIcon from '../../../public/contacts.icon.png'
 import CvIcon from '../../../public/cv.icon.png'
 import TwitchIcon from '../../../public/twitch.icon.png'
 
+
+
 import Image from 'next/image';
 
 export const Menu = () => {
+
+
     return (
         <>
             <MenuContainer>
