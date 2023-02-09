@@ -36,7 +36,7 @@ export async function getStaticPaths() {
 
 export const getStaticProps = async (context) => {
     const { params } = context
-    const response = await fetch(`http://localhost:3000/api/project?id=${params.id}`)
+    const response = await fetch(`https://valkov.xyz/api/project?id=${params.id}`)
     const project = await response.json()
 
     return {
