@@ -49,7 +49,7 @@ export const getStaticProps = async (context) => {
 
 export async function getServerSideProps(context) {
     const { id } = context.query
-    const response = await fetch(`http://valkov.xyz/api/project?id=${id}`)
+    const response = await fetch(`https://valkov.xyz/api/project?id=${id}`)
     const data = await response.json()
 
     return {
