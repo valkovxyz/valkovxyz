@@ -43,7 +43,6 @@ export const Project = ({ data }) => {
               <ProjectButton href={data.githubUrl} target="_blank"> Source code </ProjectButton>
             </ProjectButtonsContainer>
           </ProjectNameContainer>
-
           <ProjectTechnologiesContainer>
             <ProjectTitle>
               Technologies
@@ -54,7 +53,6 @@ export const Project = ({ data }) => {
                   <p>{technology}</p>
                 </ProjectTechnologyChip>
               )) }
-
             </ProjectTechnologies>
           </ProjectTechnologiesContainer>
           <ProjectDescriptionContainer>
