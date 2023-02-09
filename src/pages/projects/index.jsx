@@ -9,7 +9,6 @@ export const Projects = ({ data }) => {
   )
 }
 
-/*
 export async function getServerSideProps() {
   const res = await fetch(`https://valkov.xyz/api/projects`)
   const data = await res.json()
@@ -17,9 +16,9 @@ export async function getServerSideProps() {
     props: { data }
   }
 }
-*/
 
 
+/*
 export const getStaticProps = async () => {
 
   const response = await fetch(`https://valkov.xyz/api/projects`)
@@ -32,5 +31,6 @@ export const getStaticProps = async () => {
     }
   }
 }
+*/
 
 export default Projects;

@@ -24,7 +24,7 @@ export const Project = ({ data }) => {
       <ProjectContainer>
         <Gallery>
           <ProjectImageContainer>
-          {images.map(screen => (
+          {images && images.map(screen => (
             <Item style={{ borderRadius: "10px"}} key={screen} original={screen} width="1280" height="720">
               {({ ref, open}) => (
                 <ProjectImage ref={ref} onClick={open} src={screen} width="520" height="292"  alt={screen}/>
