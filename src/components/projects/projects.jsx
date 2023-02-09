@@ -23,9 +23,6 @@ export const ProjectsComponent = ({ data = [] }) => {
                   </ProjectsMoreDetailsButton>
                 </Link>
               </ProjectsInfo>
-              {project.screenshots.split(',').map(screen => (
-                <ProjectsImage key={project.id} src={screen} alt={'screen'} width={280} height={170}/>
-              ))}
               <ProjectsImage key={project.id} src={project.screenshots.split(',')[0].toString()} alt={'screen'} width={280} height={170}/>
             </>
           </ProjectsBox>)}
