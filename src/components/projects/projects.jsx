@@ -7,6 +7,9 @@ import {
 import Link from 'next/link';
 
 export const ProjectsComponent = ({ data }) => {
+
+  const image = data.map(project => project.screenshots).split(',')[0]
+
   return (
     <>
       <ProjectsContainer>
@@ -26,7 +29,7 @@ export const ProjectsComponent = ({ data }) => {
    {/*           {project.screenshots.split(',').map(screen => (
                 <ProjectsImage key={project.id} src={screen} alt={'screen'} width={280} height={170}/>
               ))}*/}
-              <ProjectsImage loader={project.screenshots.split(',')[0]} key={project.id} src={project.screenshots.split(',')[0]} alt={'screen'} width={280} height={170}/>
+              <ProjectsImage loader={image} key={project.id} src={project.screenshots.split(',')[0]} alt={'screen'} width={280} height={170}/>
             </>
           </ProjectsBox>)}
       </ProjectsContainer>
