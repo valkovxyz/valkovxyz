@@ -9,8 +9,8 @@ export const Projects = ({ data }) => {
   )
 }
 
-export async function getStaticProps() {
-  const res = await fetch(`http://localhost:3000/api/projects`)
+export async function getServerSideProps() {
+  const res = await fetch(`https://valkov.xyz/api/projects`)
   const data = await res.json()
   return {
     props: { data }
