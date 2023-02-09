@@ -19,25 +19,9 @@ export async function getServerSideProps() {
 }
 */
 
-export async function getStaticPaths() {
-  const response = await fetch('https://valkov.xyz/api/projects')
-  const data = await response.json()
 
-  const paths = data.map(project => {
-    return {
-      params: {
-        id: `${project.id.toString()}`
-      }
-    }
-  })
-  return {
-    paths,
-    fallback: false
-  }
-}
+export const getStaticProps = async () => {
 
-export const getStaticProps = async (context) => {
-  const { params } = context
   const response = await fetch(`https://valkov.xyz/api/projects`)
   const data = await response.json()
 
