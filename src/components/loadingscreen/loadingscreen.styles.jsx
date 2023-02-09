@@ -2,8 +2,9 @@ import styled from "styled-components";
 
 export const Screen = styled.div`
   position: relative;
-  height: 100vh;
+  height: 80vh;
   width: 100%;
+  margin-right: 4vw;
   opacity: 0;
   animation: fade 0.4s ease-in forwards;
   background: #282828;
