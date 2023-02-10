@@ -2,6 +2,7 @@ import { ProjectsComponent } from '@/components/projects/projects';
 
 export const Projects = ({ data }) => {
 
+
   return (
     <>
       <ProjectsComponent data={data}/>

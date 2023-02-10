@@ -38,12 +38,10 @@ export default function AppComponent({ Component, pageProps }) {
         <Header/>
         <Wrapper>
           <Menu/>
-          {loading
-            ? <LoadingScreen/>
-            : <Content>
-              <Component {...pageProps} />
-            </Content>
-          }
+          <Content>
+            <Component {...pageProps} />
+          </Content>
+
 
         </Wrapper>
         <Footer/>
