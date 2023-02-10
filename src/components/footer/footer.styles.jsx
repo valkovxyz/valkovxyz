@@ -5,5 +5,9 @@ export const FooterStyled = styled.footer`
   justify-content: center;
   align-items: center;
   width: 100vw;
-  padding: 20px;
+  padding: 0 20px;
+  p {
+    color: #575757;
+    font-weight: bold;
+  }
 `

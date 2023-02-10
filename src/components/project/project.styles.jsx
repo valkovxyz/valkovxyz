@@ -33,6 +33,7 @@ export const ProjectImageContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-right: 20px;
 `
 
 export const ProjectImage = styled(Image)`
@@ -53,6 +54,7 @@ export const ProjectInfo = styled.div`
   display: flex;
   flex-direction: column;
   width: 40vw;
+  margin-left: 20px;
 `
 
 export const ProjectDescriptionContainer = styled.div`
@@ -101,11 +103,12 @@ export const ProjectButtonsContainer = styled.div`
   align-items: center;
   justify-content: flex-end;
   width: 40vw;
+  flex-wrap: wrap;
 `
 
 export const ProjectButton = styled(ButtonDefault)`
   width: 180px;
   height: 40px;
-  margin-left: 10px;
+  margin: 0 0 10px 10px;
   font-weight: bold;
 `
