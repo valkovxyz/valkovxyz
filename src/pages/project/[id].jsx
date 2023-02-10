@@ -18,6 +18,10 @@ const ProjectPage = ({data}) => {
 export default ProjectPage
 
 export async function getServerSideProps(context) {
+    context.res.setHeader(
+      'Cache-Control',
+      'public, s-maxage=10, stale-while-revalidate=59'
+    )
     const { id } = context.query
     const response = await fetch(`https://valkov.xyz/api/project?id=${id}`)
     const data = await response.json()

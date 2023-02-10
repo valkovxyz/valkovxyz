@@ -41,11 +41,11 @@ export const ProjectImage = styled(Image)`
   border-radius: 10px;
   :not(:first-child) {
     width: 18.43vw;
-    height: 18.5vh;
+    height: 25.5vh;
   }
   :first-child {
     width: 40vw;
-    height: 40vh;
+    height: 50vh;
   }
 `
 

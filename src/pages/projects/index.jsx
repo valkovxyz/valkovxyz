@@ -9,7 +9,11 @@ export const Projects = ({ data }) => {
   )
 }
 
-export async function getServerSideProps() {
+export async function getServerSideProps(context) {
+  context.res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=10, stale-while-revalidate=59'
+  )
   const res = await fetch(`https://valkov.xyz/api/projects`)
   const data = await res.json()
   return {

@@ -25,7 +25,7 @@ export const Project = ({ data }) => {
         <Gallery>
           <ProjectImageContainer>
           {images && images.map(screen => (
-            <Item style={{ borderRadius: "10px"}} key={screen} original={screen} width="1280" height="720">
+            <Item  key={screen} original={screen} width="1280" height="800">
               {({ ref, open}) => (
                 <ProjectImage ref={ref} onClick={open} src={screen} width="520" height="292"  alt={screen}/>
               )}
