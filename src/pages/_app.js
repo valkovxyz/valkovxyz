@@ -15,7 +15,7 @@ export default function AppComponent({ Component, pageProps }) {
 
   const [loading, setLoading] = useState(false);
 
-/*  useEffect(() => {
+  useEffect(() => {
     const handleStart = (url) => (url !== router.asPath) && setLoading(true);
     const handleComplete = (url) => (url === router.asPath) && setLoading(false);
 
@@ -28,7 +28,7 @@ export default function AppComponent({ Component, pageProps }) {
       router.events.off('routeChangeComplete', handleComplete)
       router.events.off('routeChangeError', handleComplete)
     }
-  })*/
+  }, [])
 
   return (
     <>
@@ -38,10 +38,12 @@ export default function AppComponent({ Component, pageProps }) {
         <Header/>
         <Wrapper>
           <Menu/>
-          <Content>
-            <Component {...pageProps} />
-          </Content>
-
+          {loading
+            ? <LoadingScreen/>
+            : <Content>
+              <Component {...pageProps} />
+            </Content>
+          }
 
         </Wrapper>
         <Footer/>
