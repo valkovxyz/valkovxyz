@@ -12,6 +12,7 @@ import 'photoswipe/dist/photoswipe.css'
 import { Gallery, Item } from 'react-photoswipe-gallery'
 
 import { ProjectImage, ProjectImageContainer } from '@/components/project/project.styles';
+import LoadingScreen from '@/components/loadingscreen/loadingscreen';
 
 
 export const Project = ({ data }) => {
@@ -27,7 +28,7 @@ export const Project = ({ data }) => {
           {images && images.map(screen => (
             <Item  key={screen} original={screen} width="1280" height="800">
               {({ ref, open}) => (
-                <ProjectImage ref={ref} onClick={open} src={screen} width="520" height="292"  alt={screen}/>
+                <ProjectImage ref={ref} onClick={open} src={screen} width="520" height="292"  alt={screen} blurDataUrl={<LoadingScreen/>}/>
               )}
             </Item>
           ))}
