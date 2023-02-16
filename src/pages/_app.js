@@ -39,9 +39,10 @@ export default function AppComponent({ Component, pageProps }) {
       <GlobalStyle/>
 
       <Layout>
+
+        <Menu/>
         <Header/>
         <Wrapper>
-          <Menu/>
           {loading
             ? <LoadingScreen/>
             : <Content>

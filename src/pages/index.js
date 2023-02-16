@@ -4,14 +4,14 @@ import styles from '@/styles/Home.module.css'
 import {Layout} from '@/components/layout/layout';
 import {Menu} from '@/components/menu/menu';
 import {AboutMe} from "@/components/aboutme/aboutme";
-import { HomeSection } from '@/components/homesection/homesection';
+import { Homepage } from '@/components/homesection/homepage';
 
 const Home = () => {
     return (
         <>
-                <HomeSection/>
-                <HomeSection/>
-                <HomeSection/>
+                <Homepage/>
+                <Homepage/>
+                <Homepage/>
         </>
     )
 }

@@ -1,6 +1,5 @@
 import {useRouter} from 'next/router';
 import { Project } from '@/components/project/project';
-import App from 'next'
 const ProjectPage = ({data}) => {
 
     const router = useRouter()

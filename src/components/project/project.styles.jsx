@@ -5,16 +5,15 @@ import { ButtonDefault } from '@/components/button/button.styles';
 
 export const ProjectContainer = styled.div`
   width: 100%;
-  height: 78vh;
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-right: 6%;
   flex-wrap: wrap;
 `
 
 export const ProjectNameContainer = styled.div`
-display: flex;
+  display: flex;
   flex-direction: row;
   justify-content: space-around;
   width: 40vw;
@@ -29,7 +28,7 @@ export const ProjectTitle = styled.h1`
 
 export const ProjectImageContainer = styled.div`
   width: 40vw;
-  height: 28vh;
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

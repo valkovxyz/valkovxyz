@@ -5,19 +5,21 @@ import ContactsIcon from '../../../public/contacts.icon.png'
 import CvIcon from '../../../public/cv.icon.png'
 import TwitchIcon from '../../../public/twitch.icon.png'
 import { Tooltip } from '@nextui-org/react';
+import { useRouter } from 'next/router'
 
 
 import Image from 'next/image';
 
 export const Menu = () => {
-
+  const router = useRouter();
+  const currentRoute = router.pathname;
 
   return (
     <>
       <MenuContainer>
 
         <Tooltip content={'Home'} placement={'right'} hideArrow={true} rounded={true} offset={-20}>
-          <MenuLink href={'/'}>
+          <MenuLink href={'/'} className={currentRoute === '/' ? "active" : ""}  >
             <Image src={HomeIcon} alt="Projects" width={40} height={40}/>
           </MenuLink>
         </Tooltip>

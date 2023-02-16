@@ -12,7 +12,7 @@ export const AboutMeContainer = styled.div`
   
   border: 1px solid #2DE956;
   border-radius: 10px;
-  width: 90vw;
+  width: 80vw;
   display: flex;
   justify-content: space-around;
   align-items: center;

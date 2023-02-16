@@ -13,7 +13,7 @@ export const ProjectsContainer = styled.div`
   }
   display: flex;
   flex-direction: row;
-  width: 88vw;
+  width: 70vw;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;

@@ -4,8 +4,10 @@ export const Screen = styled.div`
   position: relative;
   height: 80vh;
   width: 100%;
-  margin-right: 5.5vw;
   opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   animation: fade 0.4s ease-in forwards;
   background: #282828;
 

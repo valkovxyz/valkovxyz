@@ -1,9 +1,13 @@
 import styled from 'styled-components';
 
-export const HomeSectionStyled = styled.div`
+export const HomePageContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
   align-items: center;
   justify-content: center;
+`
+
+export const HomePageAboutMe = styled.div`
+  
 `
