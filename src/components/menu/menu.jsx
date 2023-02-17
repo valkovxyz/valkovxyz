@@ -34,7 +34,7 @@ export const Menu = () => {
           </MenuLink>
         </Tooltip>
         <Tooltip content={'CV'} placement={'right'} hideArrow={true} rounded={true} offset={-20}>
-          <MenuLink href={'/cv'}>
+          <MenuLink href={'https://cv.djinni.co/27/d79ac9b762cd570ed3f9ebfd9a3aa4/cv_artem_valkov.pdf'} target={'_blank'}>
             <Image src={CvIcon} alt="Projects" width={40} height={40}/>
           </MenuLink>
         </Tooltip>

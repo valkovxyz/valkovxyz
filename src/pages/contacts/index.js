@@ -1,11 +1,13 @@
 import FourOhFour from '@/pages/404';
+import { ContactsContainer } from '@/components/contacts/contacts.styles';
+import { Contacts } from '@/components/contacts/contacts';
 
-const Contacts = () => {
+const ContactsPage = () => {
   return (
     <>
-      <FourOhFour/>
+      <Contacts/>
     </>
   )
 }
 
-export default Contacts
+export default ContactsPage
