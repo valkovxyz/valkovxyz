@@ -4,12 +4,20 @@ import { Button } from '@/components/button/button';
 import { ButtonDefault } from '@/components/button/button.styles';
 
 export const ProjectContainer = styled.div`
+  @keyframes ShowProjects {
+    from {
+      opacity: 0;
+    } to {
+        opacity: 1;
+      }
+  }
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
+  animation: 1s ease-out .5s 1 backwards ShowProjects;
 
   @media screen and (max-width: 800px) {
     display: flex;
