@@ -1,6 +1,5 @@
 import {useRouter} from 'next/router';
 import { Project } from '@/components/project/project';
-
 const ProjectPage = ({data}) => {
 
     const router = useRouter()
@@ -17,8 +16,25 @@ const ProjectPage = ({data}) => {
 
 export default ProjectPage
 
+export async function getServerSideProps(context) {
+    context.res.setHeader(
+      'Cache-Control',
+      'public, s-maxage=10, stale-while-revalidate=59'
+    )
+    const { id } = context.query
+    const response = await fetch(`https://valkov.xyz/api/project?id=${id}`)
+    const data = await response.json()
+
+    return {
+        props: {
+            data
+        }
+    }
+}
+
+
 /*export async function getStaticPaths() {
-    const response = await fetch('http://localhost:3000/api/projects')
+    const response = await fetch('https://valkov.xyz/api/projects')
     const data = await response.json()
 
     const paths = data.map(project => {
@@ -30,33 +46,22 @@ export default ProjectPage
     })
     return {
     paths,
-    fallback: false
-    }
-}
-
-export const getStaticProps = async (context) => {
-    const { params } = context
-    const response = await fetch(`http://localhost:3000/api/project?id=${params.id}`)
-    const project = await response.json()
-
-    return {
-
-        props: {
-            project
-        }
+    fallback: true
     }
 }*/
 
-export async function getServerSideProps(context) {
-    const { id } = context.query
-    const response = await fetch(`http://localhost:3000/api/project?id=${id}`)
+/*export async function getStaticProps(context){
+    const { params } = context
+    const response = await fetch(`https://valkov.xyz/api/project?id=${params.id}`)
     const data = await response.json()
 
     return {
+
         props: {
             data
         }
     }
-}
+}*/
+
 
 

@@ -4,17 +4,31 @@ import { Button } from '@/components/button/button';
 import { ButtonDefault } from '@/components/button/button.styles';
 
 export const ProjectContainer = styled.div`
+  @keyframes ShowProjects {
+    from {
+      opacity: 0;
+    } to {
+        opacity: 1;
+      }
+  }
   width: 100%;
-  height: 78vh;
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-right: 6%;
   flex-wrap: wrap;
+  animation: 1s ease-out .5s 1 backwards ShowProjects;
+
+  @media screen and (max-width: 800px) {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 100vw;
+  }
 `
 
 export const ProjectNameContainer = styled.div`
-display: flex;
+  display: flex;
   flex-direction: row;
   justify-content: space-around;
   width: 40vw;
@@ -29,10 +43,11 @@ export const ProjectTitle = styled.h1`
 
 export const ProjectImageContainer = styled.div`
   width: 40vw;
-  height: 28vh;
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-right: 20px;
 `
 
 export const ProjectImage = styled(Image)`
@@ -41,11 +56,29 @@ export const ProjectImage = styled(Image)`
   border-radius: 10px;
   :not(:first-child) {
     width: 18.43vw;
-    height: 18.5vh;
+    height: 25.5vh;
   }
   :first-child {
     width: 40vw;
-    height: 40vh;
+    height: 50vh;
+  }
+
+  @media screen and (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    width: 70vw;
+    :not(:first-child) {
+      width: 40vw;
+      height: 20vh;
+      margin: 5px 0 ;
+    }
+    :first-child {
+      width: 40vw;
+      height: 20vh;
+      margin: 5px 0 ;
+    }
   }
 `
 
@@ -53,6 +86,13 @@ export const ProjectInfo = styled.div`
   display: flex;
   flex-direction: column;
   width: 40vw;
+  margin-left: 20px;
+  @media screen and (max-width: 800px) {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    width: 70vw;
+  }
 `
 
 export const ProjectDescriptionContainer = styled.div`
@@ -101,11 +141,12 @@ export const ProjectButtonsContainer = styled.div`
   align-items: center;
   justify-content: flex-end;
   width: 40vw;
+  flex-wrap: wrap;
 `
 
 export const ProjectButton = styled(ButtonDefault)`
   width: 180px;
   height: 40px;
-  margin-left: 10px;
+  margin: 0 0 10px 10px;
   font-weight: bold;
 `

@@ -1,20 +1,38 @@
-import { Projects } from '@/components/projects/projects';
+import { ProjectsComponent } from '@/components/projects/projects';
 
-export const ProjectsPage = ({ data }) => {
-  console.log(data)
+export const Projects = ({ data }) => {
+
+
   return (
     <>
-      <Projects data={data}/>
+      <ProjectsComponent data={data}/>
     </>
   )
 }
 
-export async function getServerSideProps() {
-  const res = await fetch(`http://localhost:3000/api/projects`)
+export async function getServerSideProps(context) {
+  context.res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=10, stale-while-revalidate=59'
+  )
+  const res = await fetch(`https://valkov.xyz/api/projects`)
   const data = await res.json()
   return {
     props: { data }
   }
 }
+export default Projects;
 
-export default ProjectsPage;
+
+/*export const getStaticProps = async () => {
+
+  const response = await fetch(`https://valkov.xyz/api/projects`)
+  const data = await response.json()
+
+  return {
+
+    props: {
+      data
+    }
+  }
+}*/

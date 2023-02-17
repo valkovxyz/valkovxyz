@@ -6,7 +6,7 @@ import {
 } from '@/components/projects/projects.styles';
 import Link from 'next/link';
 
-export const Projects = ({ data }) => {
+export const ProjectsComponent = ({ data = [] }) => {
   return (
     <>
       <ProjectsContainer>
@@ -23,10 +23,7 @@ export const Projects = ({ data }) => {
                   </ProjectsMoreDetailsButton>
                 </Link>
               </ProjectsInfo>
-   {/*           {project.screenshots.split(',').map(screen => (
-                <ProjectsImage key={project.id} src={screen} alt={'screen'} width={280} height={170}/>
-              ))}*/}
-              <ProjectsImage key={project.id} src={project.screenshots.split(',')[0]} alt={'screen'} width={280} height={170}/>
+              <ProjectsImage key={project.id} src={project.screenshots.split(',')[0].toString()} alt={'screen'} width={280} height={170}/>
             </>
           </ProjectsBox>)}
       </ProjectsContainer>

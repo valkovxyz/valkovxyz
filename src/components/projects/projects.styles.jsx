@@ -13,13 +13,12 @@ export const ProjectsContainer = styled.div`
   }
   display: flex;
   flex-direction: row;
-  width: 88vw;
+  width: 70vw;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  :nth-child(n+4) {
-    animation: 1s ease-out 1s 1 backwards ShowProjects;
-  }
+ 
+    animation: 1s ease-out .5s 1 backwards ShowProjects;
 `
 
 export const ProjectsBox = styled.div`

@@ -15,6 +15,6 @@ model Project {
   demoUrl      String
   githubUrl    String
   description  String @db.VarChar(500)
-  screenshots  String
-  technologies String
+  screenshots  String @db.VarChar(500)
+  technologies String @db.VarChar(500)
 }
