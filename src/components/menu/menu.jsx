@@ -29,17 +29,17 @@ export const Menu = () => {
           </MenuLink>
         </Tooltip>
         <Tooltip content={'Contacts'} placement={'right'} hideArrow={true} rounded={true} offset={-20}>
-          <MenuLink href={'/'}>
+          <MenuLink href={'/contacts'}>
             <Image src={ContactsIcon} alt="Projects" width={48} height={48}/>
           </MenuLink>
         </Tooltip>
         <Tooltip content={'CV'} placement={'right'} hideArrow={true} rounded={true} offset={-20}>
-          <MenuLink href={'/'}>
+          <MenuLink href={'/cv'}>
             <Image src={CvIcon} alt="Projects" width={40} height={40}/>
           </MenuLink>
         </Tooltip>
         <Tooltip content={'Twitch'} placement={'right'} hideArrow={true} rounded={true} offset={-20}>
-          <MenuLink href={'/'}>
+          <MenuLink href={'https:/twitch.tv/z00mq'} target={'_blank'}>
             <Image src={TwitchIcon} alt="Projects" width={40} height={40}/>
           </MenuLink>
         </Tooltip>

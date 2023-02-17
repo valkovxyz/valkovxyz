@@ -20,6 +20,8 @@ export const ProjectsContainer = styled.div`
   :nth-child(n+4) {
     animation: 1s ease-out 1s 1 backwards ShowProjects;
   }
+  
+
 `
 
 export const ProjectsBox = styled.div`

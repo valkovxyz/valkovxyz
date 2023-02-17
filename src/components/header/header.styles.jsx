@@ -15,7 +15,7 @@ export const HeaderStyled = styled.header`
   align-items: flex-end;
   width: 100vw;
   padding: 20px 40px;
-  animation: 1s ease-out 1s 1 backwards ShowUp;
+  animation: 1s ease-out 1.6s 1 backwards ShowUp;
 `
 
 export const HeaderButton = styled(ButtonDefault)`

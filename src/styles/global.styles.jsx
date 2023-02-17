@@ -10,10 +10,6 @@ export const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     background-color: #282828;
     height: 100%;
-    @media screen and (max-width: 800px) {
-      padding: 10px;
-      
-    }
   }
 
   code {

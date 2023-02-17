@@ -10,8 +10,6 @@ const Home = () => {
     return (
         <>
                 <Homepage/>
-                <Homepage/>
-                <Homepage/>
         </>
     )
 }

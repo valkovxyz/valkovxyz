@@ -2,6 +2,13 @@ import styled from 'styled-components';
 import { ButtonDefault } from '@/components/button/button.styles';
 import { Tooltip } from '@nextui-org/react'
 export const MenuContainer = styled.div`
+  @keyframes ShowUp {
+    from {
+      opacity: 0;
+    } to {
+        opacity: 1;
+      }
+  }
   position: absolute;
   top: 85px;
   left: 0;
@@ -13,6 +20,12 @@ export const MenuContainer = styled.div`
   align-items: center;
   justify-content: flex-start;
   z-index: 2;
+
+  animation: 1s ease-out 1.3s 1 backwards ShowUp;
+  @media screen and (max-width: 800px) {
+    margin-left: 10px;
+    position: fixed;
+  }
 `
 
 export const MenuLink = styled(ButtonDefault)`

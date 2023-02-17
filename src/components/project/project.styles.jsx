@@ -10,6 +10,13 @@ export const ProjectContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
+
+  @media screen and (max-width: 800px) {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 100vw;
+  }
 `
 
 export const ProjectNameContainer = styled.div`
@@ -47,6 +54,24 @@ export const ProjectImage = styled(Image)`
     width: 40vw;
     height: 50vh;
   }
+
+  @media screen and (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    width: 70vw;
+    :not(:first-child) {
+      width: 40vw;
+      height: 20vh;
+      margin: 5px 0 ;
+    }
+    :first-child {
+      width: 40vw;
+      height: 20vh;
+      margin: 5px 0 ;
+    }
+  }
 `
 
 export const ProjectInfo = styled.div`
@@ -54,6 +79,12 @@ export const ProjectInfo = styled.div`
   flex-direction: column;
   width: 40vw;
   margin-left: 20px;
+  @media screen and (max-width: 800px) {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    width: 70vw;
+  }
 `
 
 export const ProjectDescriptionContainer = styled.div`
