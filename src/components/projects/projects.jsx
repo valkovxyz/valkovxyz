@@ -11,21 +11,19 @@ export const ProjectsComponent = ({ data = [] }) => {
     <>
       <ProjectsContainer>
         {data.map((project) =>
-          <ProjectsBox key={project.id}>
+          <Link key={project.id} href="project/[id]" as={`/project/${project.id}`}>
+          <ProjectsBox >
             <>
               <ProjectsInfo>
                 <ProjectsTitle>
                   {project.name}
                 </ProjectsTitle>
-                <Link href="project/[id]" as={`/project/${project.id}`}>
-                  <ProjectsMoreDetailsButton>
-                    More details...
-                  </ProjectsMoreDetailsButton>
-                </Link>
               </ProjectsInfo>
               <ProjectsImage key={project.id} src={project.screenshots.split(',')[0].toString()} alt={'screen'} width={280} height={170}/>
             </>
-          </ProjectsBox>)}
+          </ProjectsBox>
+          </Link>
+        )}
       </ProjectsContainer>
     </>
   )

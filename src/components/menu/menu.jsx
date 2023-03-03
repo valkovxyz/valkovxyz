@@ -39,7 +39,7 @@ export const Menu = () => {
           </MenuLink>
         </Tooltip>
         <Tooltip content={'Twitch'} placement={'right'} hideArrow={true} rounded={true} offset={-20}>
-          <MenuLink href={'https://twitch.tv/z00mq'} target={'_blank'}>
+          <MenuLink href={'https:/twitch.tv/z00mq'} target={'_blank'}>
             <Image src={TwitchIcon} alt="Projects" width={40} height={40}/>
           </MenuLink>
         </Tooltip>
