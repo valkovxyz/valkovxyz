@@ -102,7 +102,7 @@ export const ProjectDescriptionContainer = styled.div`
 export const ProjectDescription = styled.p`
   font-size: 18px;
   font-weight: 100;
-  color: #fff;
+  color: #989898;
   width: 40vw;
 `
 
@@ -115,19 +115,22 @@ export const ProjectTechnologiesContainer = styled.div`
 export const ProjectTechnologyChip = styled.div`
   height: 30px;
   border-radius: 10px;
-  background-color: #575757;
+  background-color: #4E4E4E;
   display: inline-block;
   padding: 0 5px;
   line-height: 0.1px;
   transition: 0.5s ease-in-out;
   margin: 0 10px 10px 0;
   p {
-    color: white;
+    color: #B6B6B6;
     font-weight: 300;
-    transition: 0.5s ease-in-out;
   }
   :hover {
-    background-color: #5199e4;
+    transition: 0.5s ease-in-out;
+    background-color: #B6B6B6;
+    p {
+        color: #4E4E4E;
+    }
   }
 `
 
