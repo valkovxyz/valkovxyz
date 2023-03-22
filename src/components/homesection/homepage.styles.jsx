@@ -36,7 +36,7 @@ export const HomePageText = styled.p`
   transition: 1s ease-in-out;
   text-align: center;
   &:hover {
-    color: #2DE956;
+    color: #ff97e5;
     
   }
 `

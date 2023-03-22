@@ -39,9 +39,9 @@ export const ProjectsBox = styled.div`
   box-shadow: 0px 0px 15px -3px rgba(77,152,209,1);
   transition: 0.5s;
   :hover {
-    -webkit-box-shadow: 0px 0px 32px -3px rgba(77,152,209,1);
-    -moz-box-shadow: 0px 0px 32px -3px rgba(77,152,209,1);
-    box-shadow: 0px 0px 30px -3px rgba(77,152,209,1);
+    -webkit-box-shadow: 0px 0px 32px -3px rgb(255,151,229);
+    -moz-box-shadow: 0px 0px 32px -3px rgb(255,151,229);
+    box-shadow: 0px 0px 30px -3px rgb(255,151,229);
     transition: 0.5s;
   }
 `

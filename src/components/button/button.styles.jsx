@@ -11,7 +11,7 @@ export const ButtonDefault = styled(Link)`
   text-decoration: none;
   transition: background-color 1s;
   :hover {
-    background-color: #2DE956;
+    background-color: #ff97e5;
     color: #fff;
   }
 `

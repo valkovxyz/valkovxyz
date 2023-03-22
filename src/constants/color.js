@@ -1,0 +1,1 @@
+export const sinii = '#5199e4'
