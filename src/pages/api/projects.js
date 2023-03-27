@@ -1,8 +1,9 @@
 import { PrismaClient } from '@prisma/client'
-
+import { cors } from '@/pages/api/cors';
 const prisma = new PrismaClient();
 
 export default async function handler(req, res) {
+  await cors(req, res)
    if (req.method === 'GET') {
     return await getProjects(res)
   } else {
