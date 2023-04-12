@@ -1,4 +1,5 @@
 import { PrismaClient } from '@prisma/client'
+import { cors } from '@/pages/api/cors';
 
 const prisma = new PrismaClient();
 
