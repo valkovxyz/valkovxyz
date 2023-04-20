@@ -1,3 +1,3 @@
-Demo [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Demo [https://valkov.xyz/](https://valkov.xyz/) 
 
 Tech-stack: NextJS, StyledComponents, MySQL, Prisma, PlanetScale, Netlify
